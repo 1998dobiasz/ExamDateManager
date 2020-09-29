@@ -10,8 +10,8 @@ public class Main {
 
         Reader r = new Reader();
         try {
-            r.Writter();
-            r.read();
+            r.outWrite(a,"Exams.txt");
+            r.read(a,"Exams.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }

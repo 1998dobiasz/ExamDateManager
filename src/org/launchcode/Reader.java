@@ -1,27 +1,23 @@
 package org.launchcode;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class Reader {
 
-    public void Writter() throws IOException {
-        FileOutputStream fos = new FileOutputStream("Exams.txt");
-        fos.write(65);
-        fos.flush();
-        fos.close();
-
-
+    public void outWrite(OverlapChecker oc,String fileName) throws IOException {
+         BufferedWriter br = new BufferedWriter(new FileWriter(fileName,true));
+            String line = oc.toString();
+            br.write(line);
+            br.flush();
+            br.close();
     }
-    public void read() throws IOException {
-        FileInputStream fis = new FileInputStream("Exams.txt");
-                int i = 0;
+    public void read(OverlapChecker oc,String fileName) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader(fileName));
                 String result = "";
-                while ((i = fis.read()) != -1) {
-                    result += (char) i;
+                while (br.readLine().isEmpty()) {
+                    result += br.readLine();
                 }
                 System.out.println(result);
-                fis.close();
+                br.close();
         }
     }
