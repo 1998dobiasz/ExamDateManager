@@ -14,7 +14,7 @@ public class Main {
             e.printStackTrace();
             System.out.println(e.toString());
         }
-       DifficultExam b = new DifficultExam("Feka",25);
+       DifficultExam b = new DifficultExam("Angol",2);
         list.insert(b);
         list.randomExamDay();
         list.Print();
