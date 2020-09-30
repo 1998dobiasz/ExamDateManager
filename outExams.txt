@@ -1,0 +1,6 @@
+SimpleExam<>Angol<>10<>
+SeveralDaysExam<>Angol<>3<>
+SeveralDaysExam<>Info<>5<>
+SeveralDaysExam<>Jog<>4<>
+SeveralDaysExam<>Matek<>6<>
+SeveralDaysExam<>Tesi<>1<>
