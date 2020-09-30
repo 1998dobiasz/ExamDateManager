@@ -1,1 +1,7 @@
-Aorg.launchcode.OverlapChecker@723279cf
+SimpleExam<>Angol<>7<>
+SimpleExam<>Ibm<>3<>
+SimpleExam<>Info<>5<>
+SeveralDaysExam<>Jog<>4<>
+SimpleExam<>Matek<>6<>
+SimpleExam<>Prog<>10<>
+SeveralDaysExam<>Tesi<>1<>

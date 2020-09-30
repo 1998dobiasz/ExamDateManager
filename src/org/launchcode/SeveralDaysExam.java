@@ -1,8 +1,11 @@
 package org.launchcode;
 
+import java.util.Date;
+
 public class SeveralDaysExam implements ExamInterface {
     private  String subject;
     private  int subjectImportance;
+    private Date day;
 
     public String getSubject() {
         return subject;
@@ -14,21 +17,21 @@ public class SeveralDaysExam implements ExamInterface {
         this.subject = subject;
         this.subjectImportance = importance;
     }
-    @Override
-    public boolean freeDay(int time) {
-        return false;
-    }
-
-    @Override
-    public boolean overLaps(ExamInterface day) {
-        return false;
-    }
 
     @Override
     public String toString() {
-        return ("Subject Name: " + subject + " Subject Importance: " + subjectImportance);
+        return ("Subject Name: " + subject +","+ " Subject Importance: " + subjectImportance);
     }
 
+    @Override
+    public void SetExamDay(Date day) {
+        this.day= day;
+    }
+
+    @Override
+    public boolean ExamDay(Date day) {
+        return this.day.equals(day);
+    }
     @Override
     public int compareTo(Object o) {
         if (o.getClass() == DifficultExam.class)

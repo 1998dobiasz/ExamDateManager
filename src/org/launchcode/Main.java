@@ -1,30 +1,31 @@
 package org.launchcode;
 
 import java.io.IOException;
+import java.util.Date;
 
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        OverlapChecker a = new OverlapChecker();
-
-        Reader r = new Reader();
+        OverlapChecker list = new OverlapChecker();
+        ReaderAndWriter r = new ReaderAndWriter();
         try {
-            r.outWrite(a,"Exams.txt");
-            r.read(a,"Exams.txt");
+            r.read(list,"Exams.txt");
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println(e.toString());
         }
-        DifficultExam b = new DifficultExam("Feka",25);
-        a.insert(new DifficultExam("Matek",54));
-        a.insert(new SimpleExam("Magyar",245));
-        a.insert(new DifficultExam("Info",20));
-        a.insert(new SeveralDaysExam("Tesi",3));
-        a.insert(new DifficultExam("Angol",10));
-        a.insert(b);
-        a.Print();
-        System.out.println("\n");
-        a.deletion(b);
-        a.Print();
+       DifficultExam b = new DifficultExam("Feka",25);
+        list.insert(b);
+        list.randomExamDay();
+        list.Print();
+        //System.out.println("\n");
+        list.matchExam(new Date(2020, 5, 15));
+        list.deletion(b);
+        try {
+           r.outWrite(list,"Exams.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println(e.toString());
+        }
     }
 }
