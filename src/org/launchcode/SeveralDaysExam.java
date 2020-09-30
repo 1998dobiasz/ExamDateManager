@@ -24,12 +24,12 @@ public class SeveralDaysExam implements ExamInterface {
     }
 
     @Override
-    public void SetExamDay(Date day) {
+    public void setExamDay(Date day) {
         this.day= day;
     }
 
     @Override
-    public boolean ExamDay(Date day) {
+    public boolean examOrFreeDay(Date day) {
         return this.day.equals(day);
     }
     @Override

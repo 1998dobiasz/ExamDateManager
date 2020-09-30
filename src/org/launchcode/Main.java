@@ -7,9 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
         OverlapChecker list = new OverlapChecker();
-        ReaderAndWriter r = new ReaderAndWriter();
+        ReaderAndWriter file = new ReaderAndWriter();
         try {
-            r.read(list,"Exams.txt");
+            file.read(list,"Exams.txt");
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println(e.toString());
@@ -19,10 +19,10 @@ public class Main {
         list.randomExamDay();
         list.Print();
         //System.out.println("\n");
-        list.matchExam(new Date(2020, 5, 15));
+        list.matchExam(new Date(2020, 7, 15));
         list.deletion(b);
         try {
-           r.outWrite(list,"Exams.txt");
+           file.outWrite(list,"Exams.txt");
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println(e.toString());

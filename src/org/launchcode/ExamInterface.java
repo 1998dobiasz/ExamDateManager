@@ -4,8 +4,8 @@ import java.util.Date;
 
 public interface ExamInterface extends Comparable {
 
-    void SetExamDay(Date day);
-    boolean ExamDay(Date day);
+    void setExamDay(Date day);
+    boolean examOrFreeDay(Date day);
     @Override
     default int compareTo(Object o) {
         return 0;
